@@ -4,7 +4,7 @@ const toggle = document.getElementById("toggle");
 
 let theme =
   localStorage.getItem("currentMode") == null
-    ? "light"
+    ? "dark"
     : localStorage.getItem("currentMode");
 
 roothtml.classList.add(theme);
