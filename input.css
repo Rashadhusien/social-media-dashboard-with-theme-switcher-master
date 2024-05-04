@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 288px));
+  justify-content: space-between;
+  row-gap: 20px;
+  align-items: center;
+}
+
+.boxs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 288px));
+  justify-content: space-between;
+  row-gap: 20px;
+}
+
+@media (max-width: 770px) {
+  .cards {
+    grid-template-columns: repeat(1, minmax(0, 288px));
+    justify-content: center;
+  }
+
+  .boxs {
+    grid-template-columns: repeat(1, minmax(0, 288px));
+    justify-content: center;
+  }
+}
+
+@media (min-width: 771px) and (max-width: 1024px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 288px));
+
+    justify-content: space-around;
+  }
+  .boxs {
+    grid-template-columns: repeat(2, minmax(0, 288px));
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1119px) {
+  main {
+    width: 90% !important;
+  }
+
+  .card,
+  .box {
+    width: 230px;
+  }
+}
+@media (min-width: 1120px) and (max-width: 1300px) {
+  main {
+    width: 90% !important;
+  }
+
+  .card,
+  .box {
+    width: 250px;
+  }
+}
